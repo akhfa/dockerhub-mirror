@@ -2,9 +2,13 @@ name: Mirror Docker Image
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # Runs at 00:00 UTC every day
+    - cron: '0 23 * * *'  # Runs at 00:00 UTC every day
   workflow_dispatch:      # Allows manual trigger
-  
+
+permissions:
+  packages: write        # Add permissions to write packages
+  contents: read
+
 jobs:
   mirror:
     runs-on: ubuntu-latest
