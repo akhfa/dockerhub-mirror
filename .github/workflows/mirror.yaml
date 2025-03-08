@@ -30,6 +30,7 @@ jobs:
           DOCKER_REPOS=(
             "lobehub/lobe-chat-database"
             "lobehub/lobe-chat"
+            "tiredofit/db-backup"
           )
 
           # Loop through each repository
